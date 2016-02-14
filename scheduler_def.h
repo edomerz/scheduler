@@ -1,0 +1,33 @@
+
+#ifndef __SCHEDULER_DEF_H__
+#define __SCHEDULER_DEF_H__
+
+
+typedef enum
+{
+	TASK_FAIL    = -1,
+	TASK_SUCCESS =  0,
+	TASK_END     =  1
+}exit_status_t;
+
+
+typedef int (*do_func)(void *data);
+
+#include <assert.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <sys/time.h>
+#include <sys/types.h>
+#include <time.h>
+
+#include "dlist.h"
+#include "sorted_list.h"
+#include "priority_queue.h"
+#include "uuid.h"
+#include "task.h"
+
+
+
+
+
+#endif /* ifndef __SCHEDULER_DEF_H__ */
